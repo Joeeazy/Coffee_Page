@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import coffee1 from "../../public/coffee/coffee1.png";
+import coffee2 from "../../public/coffee/coffee3.png";
+
 const servicesData = [
   {
     id: 1,
@@ -10,17 +12,43 @@ const servicesData = [
   },
   {
     id: 2,
-    image: 'url("/coffee/coffee2.png")',
+    image: coffee2,
     title: "White Coffee",
     subtitle: "lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     id: 3,
-    image: 'url("/coffee/coffee1.png")',
+    image: coffee1,
     title: "Hot Coffee",
     subtitle: "lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      damping: 10,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const containerVariants = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.6,
+      staggerChildren: 0.4,
+    },
+  },
+};
+
 export default function Services() {
   return (
     <div className="container my-16 space-y-4 ">
@@ -56,15 +84,34 @@ export default function Services() {
         </motion.p>
       </div>
       {/* cards section */}
-      <div>
-        <div>
-          <div>
-            {servicesData.map((service, data) => (
-              <div key={service.id}>{service.image}</div>
-            ))}
-          </div>
-        </div>
-      </div>
+
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView={"visible"}
+        viewport={{ amount: 0.8 }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+      >
+        {servicesData.map((service, index) => (
+          <motion.div
+            key={index}
+            variants={cardVariants}
+            className="text-center p-4 space-y-6"
+          >
+            <img
+              src={service.image}
+              alt="coffee images"
+              className="img-shadow2 max-w-[200px] mx-auto hover:scale-110 duration-300 cursor-pointer"
+            />
+            <div className="space-y-2">
+              <h1 className="text-2xl font-bold text-primary">
+                {service.title}
+              </h1>
+              <p className="text-darkGrey">{service.subtitle}</p>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 }
