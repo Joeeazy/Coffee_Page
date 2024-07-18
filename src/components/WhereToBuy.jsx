@@ -9,7 +9,11 @@ export default function WhereToBuy() {
         <div></div>
         {/* world map section */}
         <div className="col-span-2">
-          <img src={worldMap} alt="worldmap" />
+          <img
+            src={worldMap}
+            alt="worldmap"
+            className="w-full sm:w-[500px] mx-auto"
+          />
         </div>
       </div>
     </div>
