@@ -6,7 +6,11 @@ export default function WhereToBuy() {
     <div className="container my-36">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 place-items-center">
         {/* form section */}
-        <div></div>
+        <div>
+          <h1>Buy Our Products from Anywhere</h1>
+
+          <div>{/* input */}</div>
+        </div>
         {/* world map section */}
         <div className="col-span-2">
           <img
