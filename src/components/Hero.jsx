@@ -26,7 +26,7 @@ export default function Hero() {
             <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
               <motion.h1
                 initial={{ opacity: 0, y: -100 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   type: "spring",
                   stiffness: 100,
@@ -66,6 +66,7 @@ export default function Hero() {
               <motion.img
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{
                   type: "spring",
                   stiffness: 100,
@@ -106,33 +107,35 @@ export default function Hero() {
               </motion.div>
             </div>
             {/* third div section */}
-            <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                delay: 1.4,
-              }}
-              className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28"
-            >
-              <motion.h1 className="hidden opacity-0 text-7xl font-bold leading-tight ml-14">
-                Blvck Tumbler
-              </motion.h1>
-              <motion.div className="relative">
-                <div className="relative z-10 space-y-4 ">
-                  <h1 className="text-2xl">Blvck Tumbler</h1>
-                  <h1 className="text-sm opacity-55 leading-loose">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repellendus non, reprehenderit quo accusamus consectetur
-                    animi cumque at suscipit qui culpa, assumenda, velit optio.
-                    Facere voluptatibus rem et fugiat dolorum dolores!
-                  </h1>
-                </div>
-                <div className="absolute -top-6 -right-10 w-[250px] h-[190px] bg-darkGrey/50"></div>
+            <div className="hidden lg:block">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                  delay: 1.4,
+                }}
+                className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28"
+              >
+                <motion.h1 className="hidden opacity-0 text-7xl font-bold leading-tight ml-14">
+                  Blvck Tumbler
+                </motion.h1>
+                <motion.div className="relative">
+                  <div className="relative z-10 space-y-4 ">
+                    <h1 className="text-2xl">Blvck Tumbler</h1>
+                    <h1 className="text-sm opacity-55 leading-loose">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellendus non, reprehenderit quo accusamus consectetur
+                      animi cumque at suscipit qui culpa, assumenda, velit
+                      optio. Facere voluptatibus rem et fugiat dolorum dolores!
+                    </h1>
+                  </div>
+                  <div className="absolute -top-6 -right-10 w-[250px] h-[190px] bg-darkGrey/50"></div>
+                </motion.div>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
         </div>
         {/* sidebar menu section */}

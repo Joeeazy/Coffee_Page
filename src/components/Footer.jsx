@@ -53,7 +53,7 @@ export default function Footer() {
             className="space-y-6"
           >
             <h1 className="text-3xl font-bold">Quick Links</h1>
-            <div className="grid grid-cols sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3">
               {/* first column section */}
               <div>
                 <ul className="space-y-2">
