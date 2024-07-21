@@ -93,23 +93,49 @@ export default function Services() {
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
       >
         {servicesData.map((service, index) => (
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            className="text-center p-4 space-y-6"
-          >
-            <img
+          <div key={index} className="text-center p-4 space-y-6">
+            <motion.img
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+                delay: 0.4,
+              }}
               src={service.image}
               alt="coffee images"
               className="img-shadow2 max-w-[200px] mx-auto hover:scale-110 duration-300 cursor-pointer"
             />
             <div className="space-y-2">
-              <h1 className="text-2xl font-bold text-primary">
+              <motion.h1
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                  delay: 0.5,
+                }}
+                className="text-2xl font-bold text-primary"
+              >
                 {service.title}
-              </h1>
-              <p className="text-darkGrey">{service.subtitle}</p>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                  delay: 0.6,
+                }}
+                className="text-darkGrey"
+              >
+                {service.subtitle}
+              </motion.p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </motion.div>
     </div>
