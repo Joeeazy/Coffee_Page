@@ -1,6 +1,6 @@
 import "./App.css";
 import AppBanner from "./components/AppBanner";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero.jsx";
 import Services from "./components/Services";
 import WhereToBuy from "./components/WhereToBuy";
@@ -12,7 +12,7 @@ function App() {
       <Services />
       <WhereToBuy />
       <AppBanner />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
