@@ -3,9 +3,10 @@ import Navbar from "./Navbar";
 import { motion } from "framer-motion";
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
 import { useState } from "react";
+import coffeeImg from "../../Assets/background/bg-slate.png";
 
 const bgImage = {
-  backgroundImage: 'url("/background/bg-slate.png")',
+  backgroundImage: `url(${coffeeImg})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
@@ -71,7 +72,7 @@ export default function Hero() {
                   damping: 10,
                   delay: 0.4,
                 }}
-                src="/background/black.png"
+                src="Assets/background/black.png"
                 alt="Hero"
                 className="relative z-40 h-[400px] md:h-[700px] img-shadow"
               />

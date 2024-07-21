@@ -1,4 +1,5 @@
 import "./App.css";
+import AppBanner from "./components/AppBanner";
 // import Footer from "./components/Footer";
 import Hero from "./components/Hero.jsx";
 import Services from "./components/Services";
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Services />
       <WhereToBuy />
+      <AppBanner />
       {/* <Footer /> */}
     </div>
   );

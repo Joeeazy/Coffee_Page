@@ -1,5 +1,5 @@
 import React from "react";
-import worldMap from "../../public/background/world-map.png";
+import worldMap from "../../Assets/background/world-map.png";
 import { motion } from "framer-motion";
 
 export default function WhereToBuy() {
