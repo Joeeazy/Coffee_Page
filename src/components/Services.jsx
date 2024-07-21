@@ -44,7 +44,7 @@ const containerVariants = {
     opacity: 1,
     transition: {
       delay: 0.6,
-      staggerChildren: 0.4,
+      staggerChildren: 0.4, //delay  btn animations
     },
   },
 };
@@ -56,7 +56,7 @@ export default function Services() {
       <div className="text-center max-w-lg mx-auto space-y-2">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{
             type: "spring",
             stiffness: 100,
@@ -69,7 +69,7 @@ export default function Services() {
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{
             type: "spring",
             stiffness: 100,
