@@ -73,7 +73,7 @@ export default function Hero() {
                   damping: 10,
                   delay: 0.4,
                 }}
-                src="Assets/background/black.png"
+                src="/black.png"
                 alt="Hero"
                 className="relative z-40 h-[400px] md:h-[700px] img-shadow"
               />
